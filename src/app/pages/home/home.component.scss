@@ -14,8 +14,7 @@ $bubble-count: 25;
 .bubbles-container {
   position: relative;
   width: 100%;
-  height: calc(100dvh - vars.$HEADER_HEIGHT);
-  background: $bubble-background-color;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -23,9 +22,9 @@ $bubble-count: 25;
   position: absolute;
   bottom: -100px; //Para que se genere desde abajo
   border-radius: 50%;
-  background: $bubble-primary-color;
   animation: bubble-rise linear infinite;
   opacity: 0;
+  filter: opacity(0.7);
   
   @for $i from 1 through $bubble-count {
     &:nth-child(#{$i}) {
@@ -37,7 +36,7 @@ $bubble-count: 25;
       animation-delay: math.random(5) * 1s;
       
       @if $i % 3 == 0 {
-        background: $bubble-secondary-color;
+        filter: opacity(0.4);
       }
     }
   }

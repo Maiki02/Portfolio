@@ -1,13 +1,43 @@
-@import '_vars.scss';
+@use 'vars.scss';
 
 .bg-white{
-    background-color: map-get($NEUTRAL_COLOR, 50);
+    background-color: map-get(vars.$NEUTRAL_COLOR, 50);
+    transition: vars.$ANIMATION_TIME; 
+}
+
+.bg-white-100{
+    background-color: map-get(vars.$NEUTRAL_COLOR, 100);
+    transition: vars.$ANIMATION_TIME;
+}
+
+h1, h2, h3, h4, h5, h6, p, span{
+    color: map-get(vars.$NEUTRAL_COLOR, 800);
+    transition: vars.$ANIMATION_TIME;
+}
+
+.bg-primary{
+    background-color: map-get(vars.$PRIMARY_COLOR, 500);
+    transition: vars.$ANIMATION_TIME;
 }
 
 
-.dark-mode{
+
+.dark-theme{
 
     .bg-white{
-        background-color: map-get($PRIMARY_COLOR, 900);
+        background-color: map-get(vars.$NEUTRAL_COLOR, 900);
     }
+
+    .bg-white-100{
+        background-color: map-get(vars.$NEUTRAL_COLOR, 800);
+    }
+
+    h1, h2, h3, h4, h5, h6, p, span{
+        color: map-get(vars.$NEUTRAL_COLOR, 100);
+    }
+}
+
+
+.bg-default{
+    background-color: map-get(vars.$NEUTRAL_COLOR, "DEFAULT");
 }

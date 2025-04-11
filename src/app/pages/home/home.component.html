@@ -1,14 +1,19 @@
-<app-header></app-header>
+<div [ngClass]="{'dark-theme': (theme$ | async) === 'dark'}">
+  
+  
+  <div class="bubbles-container bg-white-100">
+    <div *ngFor="let _ of [].constructor(25); let i = index" class="bubble bg-primary"></div>
+    <app-header></app-header>
 
-<section class="bubbles-container">
-    <div *ngFor="let _ of [].constructor(25); let i = index" class="bubble"></div>
-    
     <p>{{theme$ | async}}</p>
-    
-</section>
 
-
-  <div >
-    <!-- Crear múltiples burbujas -->
-    <!-- Contenido del componente -->
+    <section class="">
+        
+        
+    </section>
+  
   </div>
+
+</div>
+
+
