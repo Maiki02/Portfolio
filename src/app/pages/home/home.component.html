@@ -3,7 +3,7 @@
 <section class="bubbles-container">
     <div *ngFor="let _ of [].constructor(25); let i = index" class="bubble"></div>
     
-
+    <p>{{theme$ | async}}</p>
     
 </section>
 

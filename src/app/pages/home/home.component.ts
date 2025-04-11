@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { LayoutComponent } from '../../shared/components/layout/layout.component';
-import { HeaderComponent } from '../../shared/components/header/header.component';
 import { CommonModule } from '@angular/common';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { HeaderComponent } from '@/shared/components/header/header.component';
+import { AppState } from '@/store/types';
+import { ThemeService } from '@/shared/services/theme.service';
 
 @Component({
     selector: 'app-home',
@@ -13,5 +16,13 @@ import { CommonModule } from '@angular/common';
     styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+    
+    public theme$: Observable<"light" | "dark">
+    constructor(private store:Store<AppState>, private themeSvc:ThemeService){
+        this.theme$ = this.themeSvc.theme$
+    }
 
+
+
+    
 }
