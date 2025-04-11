@@ -8,12 +8,24 @@ import { Component } from '@angular/core';
   styleUrl: './text-name.component.scss'
 })
 export class TextNameComponent {
-  name = `Miqueas\nGentile`;
+  completeText = `MiqueasGentile`;
+  textVisible: string = '';
   nameArray: string[] = [];
+  currentIndex = -1;
 
   constructor() {
-    // Reemplaza saltos de línea por <br> en Angular-friendly forma
-    this.nameArray = this.name.split('').flatMap(char => char === '\n' ? ['\n'] : [char]);
+    this.revealLetters();
+  }
+
+  revealLetters() {
+    const interval = setInterval(() => {
+      this.currentIndex++;
+      this.textVisible = this.completeText.slice(0, this.currentIndex);
+      if (this.currentIndex === this.completeText.length) {
+        clearInterval(interval);
+      }
+    }, 200);
   }
 }
+
 

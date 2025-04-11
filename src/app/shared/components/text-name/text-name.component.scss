@@ -1,5 +1,5 @@
-$text-color: #333;
-$cursor-blink-speed: 0.7s;
+
+$cursor-blink-speed: 1s;
 
 .typing-animation {
   
@@ -7,37 +7,32 @@ $cursor-blink-speed: 0.7s;
   .text {
     font-family: monospace;
     font-size: 8rem;
-    color: $text-color;
-    display: flex;
-    flex-wrap: wrap;
-    white-space-collapse: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    position:relative;  
+    //background:red;
   }
 
-  span {
-    opacity: 0;
-    animation: appear 0.1s forwards;
-    //border-right: 2px solid $text-color;
-    margin-right: 1px;
+  .cursor {
+    display: inline-block;
+    position:absolute;
+    margin-top: -4px;
+    margin-left: -1rem;
 
-    &:last-child {
-      animation: appear 0.1s forwards, cursor $cursor-blink-speed step-end infinite alternate;
-    }
+    animation: 
+      cursor $cursor-blink-speed infinite,
+      appear $cursor-blink-speed infinite;
   }
 
-  .cursor{
-    border-right: 8px solid;
-    animation: cursor $cursor-blink-speed step-end infinite alternate;
-  }
-}
-
-
-
-@keyframes appear {
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes cursor {
-  50% { border-color: transparent; }
+  to {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
