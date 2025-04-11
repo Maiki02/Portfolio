@@ -1,17 +1,18 @@
 
 $cursor-blink-speed: 1s;
+$SIZE_LETTER: 8rem;
+$QUANTITY_LETTER: 7;
 
 .typing-animation {
   
-  max-width: 560px;
+  max-width: calc($SIZE_LETTER * ($QUANTITY_LETTER / 2) );
   .text {
     font-family: monospace;
     font-size: 8rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
-    position:relative;  
-    //background:red;
+    position:relative;
   }
 
   .cursor {
