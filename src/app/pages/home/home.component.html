@@ -1,15 +1,18 @@
 <div [ngClass]="{'dark-theme': (theme$ | async) === 'dark'}">
   
   
-  <div class="bubbles-container bg-white">
+  <div class="bubbles-container bg-white-100">
     <!-- Si modificamos el 25, también desde el código Scss -->
     <div *ngFor="let _ of [].constructor(25); let i = index" class="bubble bg-primary"></div>
     
     <app-header></app-header>
 
-
-    <section class="">
-        <app-text-name></app-text-name>
+    <section class="section-home">
+        <app-text-name class="text-name"></app-text-name>
+        
+        <div class="actions">
+            aaa
+        </div>
         
     </section>
   

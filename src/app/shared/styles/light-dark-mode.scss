@@ -20,11 +20,6 @@ h1, h2, h3, h4, h5, h6, p, span{
     transition: vars.$ANIMATION_TIME;
 }
 
-.bg-primary{
-    background-color: map-get(vars.$PRIMARY_COLOR, 300);
-    transition: vars.$ANIMATION_TIME;
-}
-
 
 
 .dark-theme{
@@ -49,4 +44,9 @@ h1, h2, h3, h4, h5, h6, p, span{
 
 .bg-default{
     background-color: map-get(vars.$NEUTRAL_COLOR, "DEFAULT");
+}
+
+.bg-primary{
+    background-color: map-get(vars.$PRIMARY_COLOR, 500);
+    transition: vars.$ANIMATION_TIME;
 }
