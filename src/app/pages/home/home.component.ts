@@ -5,12 +5,14 @@ import { Observable } from 'rxjs';
 import { HeaderComponent } from '@/shared/components/header/header.component';
 import { AppState } from '@/store/types';
 import { ThemeService } from '@/shared/services/theme.service';
+import { TextNameComponent } from '@/shared/components/text-name/text-name.component';
 
 @Component({
     selector: 'app-home',
     imports: [
         CommonModule,
-        HeaderComponent
+        HeaderComponent,
+        TextNameComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
