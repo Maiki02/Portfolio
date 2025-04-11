@@ -1,0 +1,13 @@
+@import '_vars.scss';
+
+.bg-white{
+    background-color: map-get($NEUTRAL_COLOR, 50);
+}
+
+
+.dark-mode{
+
+    .bg-white{
+        background-color: map-get($PRIMARY_COLOR, 900);
+    }
+}

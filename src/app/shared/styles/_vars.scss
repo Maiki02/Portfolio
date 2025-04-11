@@ -5,3 +5,40 @@ $DEFAULT_COLOR: #f5f5f5;
 
 $HEADER_HEIGHT: 2.5rem;
 $MENU_WIDTH: 10rem;
+
+
+//'great-blue': {  DEFAULT: '#2A669F',  50: '#43C0CD',  100: '#3BB6CB',  200: '#339BBF',  300: '#2E7FAF',  400: '#2A669F',  500: '#244C87',  600: '#1D356E',  700: '#172256',  800: '#11143E',  900: '#0B0A26'},
+
+$PRIMARY_COLOR: (
+    DEFAULT: #3f51b5,
+    50: #43C0CD,
+    100: #3BB6CB,
+    200: #339BBF,
+    300: #2E7FAF,
+    400: #2A669F,
+    500: #244C87,
+    600: #1D356E,
+    700: #172256,
+    800: #11143E,
+    900: #0B0A26
+);
+
+//'grey': {  DEFAULT: '#BBBBBB',  50: '#FFFFFF',  100: '#F8F8F8',  200: '#E4E4E4',  300: '#CFCFCF',  400: '#BBBBBB',  500: '#979797',  600: '#747474',  700: '#505050',  800: '#2C2C2C',  900: '#080808',  950: '#000000'},
+
+$NEUTRAL_COLOR: (
+    DEFAULT: #BBBBBB,
+    50: #FFFFFF,
+    100: #F8F8F8,
+    200: #E4E4E4,
+    300: #CFCFCF,
+    400: #BBBBBB,
+    500: #979797,
+    600: #747474,
+    700: #505050,
+    800: #2C2C2C,
+    900: #080808,
+    950: #000000
+);
+
+
+$BACKGROUND_COLOR: $NEUTRAL_COLOR;
