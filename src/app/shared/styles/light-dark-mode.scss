@@ -5,6 +5,11 @@
     transition: vars.$ANIMATION_TIME; 
 }
 
+.bg-white-opacity{
+    background-color: rgba(map-get(vars.$NEUTRAL_COLOR, 50), 0.7);
+    transition: vars.$ANIMATION_TIME;
+}
+
 .bg-white-100{
     background-color: map-get(vars.$NEUTRAL_COLOR, 100);
     transition: vars.$ANIMATION_TIME;
@@ -16,7 +21,7 @@ h1, h2, h3, h4, h5, h6, p, span{
 }
 
 .bg-primary{
-    background-color: map-get(vars.$PRIMARY_COLOR, 500);
+    background-color: map-get(vars.$PRIMARY_COLOR, 300);
     transition: vars.$ANIMATION_TIME;
 }
 
@@ -26,6 +31,10 @@ h1, h2, h3, h4, h5, h6, p, span{
 
     .bg-white{
         background-color: map-get(vars.$NEUTRAL_COLOR, 900);
+    }
+
+    .bg-white-opacity{
+        background-color: rgba(map-get(vars.$NEUTRAL_COLOR, 900), 0.7);
     }
 
     .bg-white-100{
