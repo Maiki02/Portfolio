@@ -5,8 +5,8 @@
     width:100%;
     min-height: 100dvh;
     display: grid;
-    grid-template-columns: $MENU_WIDTH 1fr;
-    grid-template-rows: $HEADER_HEIGHT 1fr $HEADER_HEIGHT;
+    grid-template-columns: vars.$MENU_WIDTH 1fr;
+    grid-template-rows: vars.$HEADER_HEIGHT 1fr vars.$HEADER_HEIGHT;
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
 }
