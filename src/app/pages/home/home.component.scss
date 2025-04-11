@@ -1,0 +1,62 @@
+@import "_vars.scss";
+
+// Variables para personalización
+$bubble-background-color: transparent;
+$bubble-primary-color: rgba(255, 255, 255, 0.3);
+$bubble-secondary-color: rgba(255, 255, 255, 0.15);
+$bubble-animation-duration: 20s;
+$bubble-size-min: 10px;
+$bubble-size-max: 80px;
+$bubble-count: 25;
+
+.bubbles-container {
+  position: relative;
+  width: 100%;
+  height: calc(100dvh - $HEADER_HEIGHT);
+  background: $bubble-background-color;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px; //Para que se genere desde abajo
+  border-radius: 50%;
+  background: $bubble-primary-color;
+  animation: bubble-rise linear infinite;
+  opacity: 0;
+  
+  @for $i from 1 through $bubble-count {
+    &:nth-child(#{$i}) {
+      $size: random($bubble-size-max - $bubble-size-min) + $bubble-size-min;
+      left: random(100) * 1%;
+      width: $size;
+      height: $size;
+      animation-duration: $bubble-animation-duration - random(10) * 1s;
+      animation-delay: random(5) * 1s;
+      
+      @if $i % 3 == 0 {
+        background: $bubble-secondary-color;
+      }
+    }
+  }
+}
+
+@keyframes bubble-rise {
+  0% {
+    bottom: -100px;
+    opacity: 0.1;
+  }
+  
+  20% {
+    opacity: 0.8;
+  }
+  
+  80% {
+    opacity: 0.6;
+  }
+  
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
