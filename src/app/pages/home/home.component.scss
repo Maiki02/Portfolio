@@ -16,12 +16,11 @@
   height: 100%;
 }
 
-.text-name, .actions{
-  width: vars.$WIDTH_COLUMN_HOME; 
+.text-name{
+  min-height: vars.$HEIGHT_LETTER_HOME;
 }
 
 .text-name {
-  height: 300px;
   animation: fade-in-left fade-home-animations.$ANIMATION_FADE_TIME ease-in-out;
 }
 

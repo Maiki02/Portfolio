@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './text-name.component.scss'
 })
 export class TextNameComponent {
-  completeText = `MiqueasGentile`;
+  completeText = `Miqueas\nGentile`;
   textVisible: string = '';
   nameArray: string[] = [];
   currentIndex = -1;

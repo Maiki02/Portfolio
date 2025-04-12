@@ -7,24 +7,26 @@ $BACKGROUND_ACTIVE: map.get(vars.$PRIMARY_COLOR, 900);
 $SCALE_BUTTON_PRESSED: 0.95;
 $ANIMATION_BUTTON_PRESSED_DURATION: 2s;
 
-$WIDTH_BUTTON: 310px;
-$HEIGHT_BUTTON: 58px;
+$WIDTH_BUTTON: clamp(180px, 22vw, 340px);
+$HEIGHT_BUTTON: clamp(40px, 5vw, 64px);
+$BUTTON_LETTER_SIZE: clamp(1rem, 1.75vw, 2.5rem);
+
 
 .btn {
   position: relative;
-  padding: 1rem 2rem;
+  //padding: 1rem 2rem;
   background-color: $BACKGROUND;
   border: none;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   transition: 0.3s;
   width: $WIDTH_BUTTON;
   height: $HEIGHT_BUTTON;
 }
 
 .btn-text{
-  font-size: 2rem;
+  font-size: $BUTTON_LETTER_SIZE;
   color: map.get(vars.$NEUTRAL_COLOR, 50);
 }
 

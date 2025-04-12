@@ -1,16 +1,19 @@
+@use "vars.scss";
 
 $cursor-blink-speed: 1s;
-$SIZE_LETTER: 8rem;
 $QUANTITY_LETTER: 7;
 
 .typing-animation {
-  
-  max-width: calc( $QUANTITY_LETTER / 2 * 10 * 1rem);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   .text {
-    font-size: 8rem;
+    font-size: vars.$SIZE_LETTER_HOME;
+    line-height: vars.$LINE_HEIGHT_LETTER_HOME;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    white-space: normal;
+    white-space: pre-line;
     position:relative;
   }
 
