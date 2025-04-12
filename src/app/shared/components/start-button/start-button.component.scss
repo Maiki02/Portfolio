@@ -7,9 +7,9 @@ $BACKGROUND_ACTIVE: map.get(vars.$PRIMARY_COLOR, 900);
 $SCALE_BUTTON_PRESSED: 0.95;
 $ANIMATION_BUTTON_PRESSED_DURATION: 2s;
 
-$WIDTH_BUTTON: clamp(180px, 20vw, 340px);
-$HEIGHT_BUTTON: clamp(40px, 4vw, 64px);
-$BUTTON_LETTER_SIZE: clamp(1rem, 1.6vw, 2.5rem);
+$WIDTH_BUTTON: clamp(170px, 20vw, 340px);
+$HEIGHT_BUTTON: clamp(36px, 4vw, 64px);
+$BUTTON_LETTER_SIZE: clamp(0.9rem, 1.6vw, 2.5rem);
 
 
 .btn {
