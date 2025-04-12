@@ -1,7 +1,9 @@
 export interface OptionsReducer{
     theme: "light" | "dark",
+    language: "es" | "en"
 }
 
 export const OPTIONS_REDUCER_INITIAL_STATE: OptionsReducer = {
-    theme: "light"
+    theme: "light",
+    language: "es",
 }

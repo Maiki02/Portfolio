@@ -9,6 +9,13 @@ export const optionsReducer = createReducer(
         ...state,
         theme: action.theme
       }
+    )),
+
+    on(actions.setLanguage, (state, action) => (
+      {
+        ...state,
+        language: action.language
+      }
     ))
 
 );

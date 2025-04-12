@@ -1,6 +1,5 @@
 <button 
   class="btn"
-  [ngClass]="{'is-expanded': getIsExpanded()}"
   (click)="startAnimation()"
   (mousemove)="onMouseMove($event)"
   (mouseenter)="show = true"
@@ -11,5 +10,5 @@
   class="dot" 
   [ngStyle]="{'top.px': y, 'left.px': x}">
 </span>
-  <span class="btn-text">Comenzar</span>
+  <span class="btn-text">{{getTextButton()}}</span>
 </button>

@@ -1,0 +1,2 @@
+<button (click)="setLanguage('es')" [ngClass]="{'selected': (language | async) == 'es' }">ES</button>
+<button (click)="setLanguage('en')" [ngClass]="{'selected': (language | async) == 'en' }">EN</button>
