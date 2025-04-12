@@ -1,0 +1,61 @@
+
+$ANIMATION_FADE_POSITION: 200px;
+$ANIMATION_FADE_TIME: 0.5s;
+
+$ANIMATION_OUT_TIME: 0.8s;
+
+@keyframes fade-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX( calc(-1 * $ANIMATION_FADE_POSITION) );
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fade-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX( $ANIMATION_FADE_POSITION);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .is-out-left{
+    animation: fade-out-left $ANIMATION_OUT_TIME ease-in-out;
+  }
+  
+  @keyframes fade-out-left {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX( calc(-1 * $ANIMATION_FADE_POSITION) );
+    }
+  }
+  
+  .is-out-right{
+    animation: fade-out-right $ANIMATION_OUT_TIME ease-in-out;
+  }
+  
+  @keyframes fade-out-right {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX( $ANIMATION_FADE_POSITION);
+    }
+  }
+  
+  .is-out-left, .is-out-right{
+    opacity: 0;
+  }
