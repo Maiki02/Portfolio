@@ -7,6 +7,7 @@ import { AppState } from '@/store/types';
 import { ThemeService } from '@/shared/services/theme.service';
 import { TextNameComponent } from '@/shared/components/text-name/text-name.component';
 import { StartButtonComponent } from '@/shared/components/start-button/start-button.component';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
@@ -21,14 +22,14 @@ import { StartButtonComponent } from '@/shared/components/start-button/start-but
 })
 export class HomeComponent {
     
-    private INDIVIDUAL_ANIMATION_DURATION = 800;
+    private INDIVIDUAL_ANIMATION_DURATION = 700;
     private isOutHeader = false;
     private isOutName = false;
     private isOutButton = false;
 
 
     public theme$: Observable<"light" | "dark">
-    constructor(private store:Store<AppState>, private themeSvc:ThemeService){
+    constructor(private themeSvc:ThemeService, private router:Router){
         this.theme$ = this.themeSvc.theme$
     }
 
@@ -37,11 +38,16 @@ export class HomeComponent {
 
         setTimeout(() => {
             this.setIsOutName(true);
-        }, this.INDIVIDUAL_ANIMATION_DURATION - 100);
+        }, this.INDIVIDUAL_ANIMATION_DURATION - 200);
 
         setTimeout(() => {
             this.setIsOutButton(true);
-        }, this.INDIVIDUAL_ANIMATION_DURATION * 2 - 300);
+        }, this.INDIVIDUAL_ANIMATION_DURATION * 2 - 400);
+
+
+        setTimeout(() => {
+            console.log("Redireccionar a /library")
+        }, this.INDIVIDUAL_ANIMATION_DURATION * 3 - 600);
     }
 
     public getIsOutHeader() {

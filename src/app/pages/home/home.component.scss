@@ -1,6 +1,6 @@
 @use "vars.scss";
 @use "bubbles.scss";
-@use "fade-home-animations.scss";
+@use "home-animations.scss";
 
 .header{
   display:flex;
@@ -21,7 +21,7 @@
 }
 
 .text-name {
-  animation: fade-in-left fade-home-animations.$ANIMATION_FADE_TIME ease-in-out;
+  animation: fade-in-left home-animations.$ANIMATION_FADE_TIME ease-in-out;
 }
 
 .actions{
@@ -29,6 +29,6 @@
   align-items: center;
   justify-content: center;
 
-  animation: fade-in-right fade-home-animations.$ANIMATION_FADE_TIME ease-in-out;
+  animation: fade-in-right home-animations.$ANIMATION_FADE_TIME ease-in-out;
 }
 
