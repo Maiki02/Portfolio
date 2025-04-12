@@ -1,14 +1,14 @@
 @use 'vars.scss';
+@use "sass:map";
 
-$BACKGROUND: map-get(vars.$PRIMARY_COLOR, 700);
-$BACKGROUND_HOVER: map-get(vars.$PRIMARY_COLOR, 800);
-$BACKGROUND_ACTIVE: map-get(vars.$PRIMARY_COLOR, 900);
+$BACKGROUND: map.get(vars.$PRIMARY_COLOR, 700);
+$BACKGROUND_HOVER: map.get(vars.$PRIMARY_COLOR, 800);
+$BACKGROUND_ACTIVE: map.get(vars.$PRIMARY_COLOR, 900);
 $SCALE_BUTTON_PRESSED: 0.95;
 $ANIMATION_BUTTON_PRESSED_DURATION: 2s;
 
 $WIDTH_BUTTON: 310px;
 $HEIGHT_BUTTON: 58px;
-
 
 .btn {
   position: relative;
@@ -25,7 +25,7 @@ $HEIGHT_BUTTON: 58px;
 
 .btn-text{
   font-size: 2rem;
-  color: map-get(vars.$NEUTRAL_COLOR, 50);
+  color: map.get(vars.$NEUTRAL_COLOR, 50);
 }
 
 .btn:hover:not(.is-expanded) {

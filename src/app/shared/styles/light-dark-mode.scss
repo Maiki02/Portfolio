@@ -1,32 +1,33 @@
 @use 'vars.scss';
+@use "sass:map";
 
 .bg-white{
-    background-color: map-get(vars.$NEUTRAL_COLOR, 50);
+    background-color: map.get(vars.$NEUTRAL_COLOR, 50);
     transition: vars.$ANIMATION_TIME; 
 }
 
 .bg-white-opacity{
-    background-color: rgba(map-get(vars.$NEUTRAL_COLOR, 50), 0.7);
+    background-color: rgba(map.get(vars.$NEUTRAL_COLOR, 50), 0.7);
     transition: vars.$ANIMATION_TIME;
 }
 
 .bg-white-100{
-    background-color: map-get(vars.$NEUTRAL_COLOR, 100);
+    background-color: map.get(vars.$NEUTRAL_COLOR, 100);
     transition: vars.$ANIMATION_TIME;
 }
 
 .bg-white-200{
-    background-color: map-get(vars.$NEUTRAL_COLOR, 200);
+    background-color: map.get(vars.$NEUTRAL_COLOR, 200);
     transition: vars.$ANIMATION_TIME;
 }
 
 h1, h2, h3, h4, h5, h6, p, span{
-    color: map-get(vars.$NEUTRAL_COLOR, 800);
+    color: map.get(vars.$NEUTRAL_COLOR, 800);
     transition: vars.$ANIMATION_TIME;
 }
 
 .white-color{
-    color: map-get(vars.$NEUTRAL_COLOR, 50);
+    color: map.get(vars.$NEUTRAL_COLOR, 50);
     transition: vars.$ANIMATION_TIME;
 }
 
@@ -35,36 +36,36 @@ h1, h2, h3, h4, h5, h6, p, span{
 .dark-theme{
 
     .bg-white{
-        background-color: map-get(vars.$NEUTRAL_COLOR, 900);
+        background-color: map.get(vars.$NEUTRAL_COLOR, 900);
     }
 
     .bg-white-opacity{
-        background-color: rgba(map-get(vars.$NEUTRAL_COLOR, 900), 0.7);
+        background-color: rgba(map.get(vars.$NEUTRAL_COLOR, 900), 0.7);
     }
 
     .bg-white-100{
-        background-color: map-get(vars.$NEUTRAL_COLOR, 800);
+        background-color: map.get(vars.$NEUTRAL_COLOR, 800);
     }
 
     .bg-white-200{
-        background-color: map-get(vars.$NEUTRAL_COLOR, 700);
+        background-color: map.get(vars.$NEUTRAL_COLOR, 700);
     }
 
     h1, h2, h3, h4, h5, h6, p, span{
-        color: map-get(vars.$NEUTRAL_COLOR, 100);
+        color: map.get(vars.$NEUTRAL_COLOR, 100);
     }
 
     .white-color{
-        color: map-get(vars.$NEUTRAL_COLOR, 900);
+        color: map.get(vars.$NEUTRAL_COLOR, 900);
     }
 }
 
 
 .bg-default{
-    background-color: map-get(vars.$NEUTRAL_COLOR, "DEFAULT");
+    background-color: map.get(vars.$NEUTRAL_COLOR, "DEFAULT");
 }
 
 .bg-primary{
-    background-color: map-get(vars.$PRIMARY_COLOR,300);
+    background-color: map.get(vars.$PRIMARY_COLOR,300);
     transition: vars.$ANIMATION_TIME;
 }

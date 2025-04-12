@@ -1,4 +1,5 @@
 @use 'vars.scss';
+@use "sass:map";
 
 .theme-toggle {
     cursor: pointer;
@@ -42,22 +43,22 @@
 
   .moon-icon{
     svg {
-        fill: map-get(vars.$NEUTRAL_COLOR, 800);
+        fill: map.get(vars.$NEUTRAL_COLOR, 800);
     }
 
     path{
         stroke-width:1;
-        stroke: map-get(vars.$NEUTRAL_COLOR, 800);
+        stroke: map.get(vars.$NEUTRAL_COLOR, 800);
     }
   }
 
   .sun-icon{
     svg {
-        fill: map-get(vars.$NEUTRAL_COLOR, 100);
+        fill: map.get(vars.$NEUTRAL_COLOR, 100);
     }
 
     path{
         
-        stroke: map-get(vars.$NEUTRAL_COLOR, 100);
+        stroke: map.get(vars.$NEUTRAL_COLOR, 100);
     }
   }

@@ -1,12 +1,13 @@
 @use "vars.scss";
+@use "sass:map";
 
-$PRIMARY_COLOR: map-get(vars.$PRIMARY_COLOR, 500);
-$PRIMARY_HOVER_COLOR: map-get(vars.$PRIMARY_COLOR, 600);
-$PRIMARY_ACTIVE_COLOR: map-get(vars.$PRIMARY_COLOR, 700);
+$PRIMARY_COLOR: map.get(vars.$PRIMARY_COLOR, 500);
+$PRIMARY_HOVER_COLOR: map.get(vars.$PRIMARY_COLOR, 600);
+$PRIMARY_ACTIVE_COLOR: map.get(vars.$PRIMARY_COLOR, 700);
 
 .btn-primary{
     background-color: $PRIMARY_COLOR;
-    color: map-get(vars.$NEUTRAL_COLOR, 100);
+    color: map.get(vars.$NEUTRAL_COLOR, 100);
     border: 1px solid $PRIMARY_COLOR;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
