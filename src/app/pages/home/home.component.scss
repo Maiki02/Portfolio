@@ -32,3 +32,20 @@
   animation: fade-in-right home-animations.$ANIMATION_FADE_TIME ease-in-out;
 }
 
+
+@media screen and (max-width: 768px) {
+  .section-home{
+    margin-top: 6rem;
+    gap: 3rem;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+  .section-home{
+    margin-top: 8rem;
+    gap: 4rem;
+  }
+}
+
