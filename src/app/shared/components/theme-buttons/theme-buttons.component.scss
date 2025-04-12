@@ -1,0 +1,63 @@
+@use 'vars.scss';
+
+.theme-toggle {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .icon-container {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .sun-icon, .moon-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+  
+  .hidden {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+  }
+  
+
+  .moon-icon{
+    svg {
+        fill: map-get(vars.$NEUTRAL_COLOR, 800);
+    }
+
+    path{
+        stroke-width:1;
+        stroke: map-get(vars.$NEUTRAL_COLOR, 800);
+    }
+  }
+
+  .sun-icon{
+    svg {
+        fill: map-get(vars.$NEUTRAL_COLOR, 100);
+    }
+
+    path{
+        
+        stroke: map-get(vars.$NEUTRAL_COLOR, 100);
+    }
+  }

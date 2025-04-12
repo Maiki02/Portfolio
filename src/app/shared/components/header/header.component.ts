@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ButtonLightDarkModeComponent } from '../button-light-dark-mode/button-light-dark-mode.component';
+import { ThemeButtonsComponent } from '../theme-buttons/theme-buttons.component';
 
 @Component({
     selector: 'app-header',
     imports: [
-        ButtonLightDarkModeComponent
+        ThemeButtonsComponent
     ],
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'
