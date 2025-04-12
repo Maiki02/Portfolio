@@ -5,14 +5,14 @@
     <!-- Si modificamos el 25, también desde el código Scss -->
     <div *ngFor="let _ of [].constructor(25); let i = index" class="bubble bg-primary"></div>
     
-    <app-header></app-header>
+    <app-header class="header" [ngClass]="{'is-out-right': getIsOutHeader()}"></app-header>
 
     <section class="section-home">
-        <app-text-name class="text-name"></app-text-name>
+        <app-text-name class="text-name" [ngClass]="{'is-out-left': getIsOutName()}"></app-text-name>
         
-        <div class="actions">
+        <div class="actions" [ngClass]="{'is-out-right': getIsOutButton()}">
             
-          <app-start-button />
+          <app-start-button (clicked)="startAnimation()" />
         </div>
         
     </section>
