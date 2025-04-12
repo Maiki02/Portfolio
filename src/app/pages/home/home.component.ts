@@ -6,13 +6,15 @@ import { HeaderComponent } from '@/shared/components/header/header.component';
 import { AppState } from '@/store/types';
 import { ThemeService } from '@/shared/services/theme.service';
 import { TextNameComponent } from '@/shared/components/text-name/text-name.component';
+import { StartButtonComponent } from '@/shared/components/start-button/start-button.component';
 
 @Component({
     selector: 'app-home',
     imports: [
         CommonModule,
         HeaderComponent,
-        TextNameComponent
+        TextNameComponent,
+        StartButtonComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'

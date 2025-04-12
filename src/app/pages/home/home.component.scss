@@ -1,18 +1,58 @@
 @use "vars.scss";
+@use "buttons.scss";
 @use 'sass:math';
+
+$ANIMATION_FADE_POSITION: 200px;
+$ANIMATION_FADE_TIME: 0.5s;
 
 .section-home{
   display:flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  //justify-content: center;
+  flex-direction: column;
   gap: 2rem;
   margin-top: 4rem;
   height: 100%;
 }
 
 .text-name, .actions{
-  width: vars.$WIDTH_COLUMN_HOME;
-  
+  width: vars.$WIDTH_COLUMN_HOME; 
+}
+
+.text-name {
+  height: 300px;
+  animation: fade-in-left $ANIMATION_FADE_TIME ease-in-out;
+}
+
+.actions{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: fade-in-right $ANIMATION_FADE_TIME ease-in-out;
+}
+
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX( calc(-1 * $ANIMATION_FADE_POSITION) );
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX( $ANIMATION_FADE_POSITION);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 

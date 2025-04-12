@@ -1,0 +1,30 @@
+@use "vars.scss";
+
+$PRIMARY_COLOR: map-get(vars.$PRIMARY_COLOR, 500);
+$PRIMARY_HOVER_COLOR: map-get(vars.$PRIMARY_COLOR, 600);
+$PRIMARY_ACTIVE_COLOR: map-get(vars.$PRIMARY_COLOR, 700);
+
+.btn-primary{
+    background-color: $PRIMARY_COLOR;
+    color: map-get(vars.$NEUTRAL_COLOR, 100);
+    border: 1px solid $PRIMARY_COLOR;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: vars.$ANIMATION_TIME;
+
+}
+
+.btn-primary:hover{
+    background-color: $PRIMARY_HOVER_COLOR;
+    border: 1px solid $PRIMARY_HOVER_COLOR;
+}
+
+.btn-primary:active{
+    background-color: $PRIMARY_ACTIVE_COLOR;
+    border: 1px solid $PRIMARY_ACTIVE_COLOR;
+}
+

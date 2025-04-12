@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5, h6, p, span{
     transition: vars.$ANIMATION_TIME;
 }
 
+.white-color{
+    color: map-get(vars.$NEUTRAL_COLOR, 50);
+    transition: vars.$ANIMATION_TIME;
+}
+
 
 
 .dark-theme{
@@ -39,6 +44,10 @@ h1, h2, h3, h4, h5, h6, p, span{
     h1, h2, h3, h4, h5, h6, p, span{
         color: map-get(vars.$NEUTRAL_COLOR, 100);
     }
+
+    .white-color{
+        color: map-get(vars.$NEUTRAL_COLOR, 900);
+    }
 }
 
 
@@ -47,6 +56,6 @@ h1, h2, h3, h4, h5, h6, p, span{
 }
 
 .bg-primary{
-    background-color: map-get(vars.$PRIMARY_COLOR, 500);
+    background-color: map-get(vars.$PRIMARY_COLOR,300);
     transition: vars.$ANIMATION_TIME;
 }

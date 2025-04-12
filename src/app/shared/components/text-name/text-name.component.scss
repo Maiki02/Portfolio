@@ -7,7 +7,6 @@ $QUANTITY_LETTER: 7;
   
   max-width: calc( $QUANTITY_LETTER / 2 * 10 * 1rem);
   .text {
-    font-family: monospace;
     font-size: 8rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
