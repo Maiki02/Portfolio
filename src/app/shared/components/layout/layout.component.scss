@@ -18,8 +18,13 @@
 }
 .content { 
     grid-area: 2 / 2 / 3 / 3; 
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     transition: transform vars.$ANIMATION_TIME ease-in-out;
+
+    //Colocaremos el footer abajo del contenido
+    display:grid;
+    grid-template-rows: 1fr auto;
+
 }
 
 //--------- BODY LAYOUT ----------\\

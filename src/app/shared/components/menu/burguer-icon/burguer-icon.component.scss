@@ -1,4 +1,5 @@
-@import 'vars.scss';
+@use 'vars.scss';
+@use "sass:map";
 
 $PADDING_HOVER: 0.6rem;
 $POSITION: calc(#{$PADDING_HOVER} / 2);
@@ -11,10 +12,8 @@ $POSITION: calc(#{$PADDING_HOVER} / 2);
     border-radius: 50%;
 }
 
-
-.line {
-  //transform-origin: center;
-  /*transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-              opacity 0.3s ease;*/
+.is-dark-mode{
+    path{
+        stroke: map.get(vars.$NEUTRAL_COLOR, 50);
+    }
 }
-    

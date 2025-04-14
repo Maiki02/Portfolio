@@ -5,7 +5,10 @@
     <app-header class="header"></app-header>
     <app-menu class="menu" [ngClass]="{'hidden': !getIsMenuOpen(), 'is-open': getIsMenuOpen()}"></app-menu>
     <main class="content">
-        <ng-content></ng-content>  
+        <section class="section">
+            <ng-content></ng-content>  
+
+        </section>
         <app-footer class="footer"></app-footer>
     </main>
 </div>
