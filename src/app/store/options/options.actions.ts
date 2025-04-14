@@ -9,3 +9,8 @@ export const setLanguage = createAction(
     '[Options] Set Language', 
     props<{language: "es" | "en"}>()
 )
+
+export const setRoute = createAction(
+    '[Options] Set Route', 
+    props<{route: string}>()
+)

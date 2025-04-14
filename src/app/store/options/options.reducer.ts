@@ -16,6 +16,12 @@ export const optionsReducer = createReducer(
         ...state,
         language: action.language
       }
+    )),
+    on(actions.setRoute, (state, action) => (
+      {
+        ...state,
+        route: action.route
+      }
     ))
 
 );

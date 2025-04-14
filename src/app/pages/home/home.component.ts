@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -8,6 +8,8 @@ import { ThemeService } from '@/shared/services/theme.service';
 import { TextNameComponent } from '@/shared/components/text-name/text-name.component';
 import { StartButtonComponent } from '@/shared/components/start-button/start-button.component';
 import { Router } from '@angular/router';
+import { setRoute } from '@/store/options/options.actions';
+import { ROUTES } from '@/shared/const/routes';
 
 @Component({
     selector: 'app-home',
@@ -20,7 +22,7 @@ import { Router } from '@angular/router';
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
     
     private INDIVIDUAL_ANIMATION_DURATION = 700;
     private isOutHeader = false;
@@ -29,8 +31,12 @@ export class HomeComponent {
 
 
     public theme$: Observable<"light" | "dark">
-    constructor(private themeSvc:ThemeService, private router:Router){
+    constructor(private store:Store<AppState>, private themeSvc:ThemeService, private router:Router){
         this.theme$ = this.themeSvc.theme$
+    }
+
+    ngOnInit(): void {
+        this.store.dispatch(setRoute({route: ROUTES.HOME}))
     }
 
     startAnimation(){
