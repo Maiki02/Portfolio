@@ -30,7 +30,8 @@ export class HomeComponent implements OnInit {
     private isOutButton = false;
 
 
-    public theme$: Observable<"light" | "dark">
+    public theme$: Observable<"light" | "dark">;
+
     constructor(private store:Store<AppState>, private themeSvc:ThemeService, private router:Router){
         this.theme$ = this.themeSvc.theme$
     }
@@ -44,16 +45,16 @@ export class HomeComponent implements OnInit {
 
         setTimeout(() => {
             this.setIsOutName(true);
-        }, this.INDIVIDUAL_ANIMATION_DURATION - 200);
+        }, this.INDIVIDUAL_ANIMATION_DURATION - 400);
 
         setTimeout(() => {
             this.setIsOutButton(true);
-        }, this.INDIVIDUAL_ANIMATION_DURATION * 2 - 400);
+        }, this.INDIVIDUAL_ANIMATION_DURATION * 2 - 800);
 
 
         setTimeout(() => {
-            console.log("Redireccionar a /library")
-        }, this.INDIVIDUAL_ANIMATION_DURATION * 3 - 600);
+            this.router.navigate([ROUTES.LIBRARY]);
+        }, this.INDIVIDUAL_ANIMATION_DURATION * 2);
     }
 
     public getIsOutHeader() {

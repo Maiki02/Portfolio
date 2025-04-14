@@ -5,7 +5,9 @@
     <!-- Si modificamos el 25, también desde el código Scss -->
     <div *ngFor="let _ of [].constructor(25); let i = index" class="bubble bg-primary"></div>
 
-    <app-header class="header" [ngClass]="{'is-out-top': getIsOutHeader()}"></app-header>
+    <app-header class="header" 
+    style="--width:100%;"
+    [ngClass]="{'is-out-top': getIsOutHeader()}"></app-header>
 
     <section class="section-home">
         <app-text-name class="text-name" [ngClass]="{'is-out-left': getIsOutName()}"></app-text-name>

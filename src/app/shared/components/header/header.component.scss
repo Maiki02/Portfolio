@@ -1,11 +1,14 @@
 @use 'vars.scss';
 
+:host {
+    --width: auto;
+}
 
 header{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: var(--width);
     padding: 0 1rem;
     height: vars.$HEADER_HEIGHT;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
