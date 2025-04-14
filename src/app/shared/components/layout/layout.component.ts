@@ -25,10 +25,12 @@ export class LayoutComponent {
     private isMenuOpen = false;
 
     public theme$: Observable<"light" | "dark">;
+    public lang$: Observable<"es" | "en">
     private isOpen$!: Subscription;
 
     constructor(private store: Store<AppState>, private themeSvc:ThemeService) {
       this.theme$ = this.themeSvc.theme$;
+      this.lang$ = this.store.select('options','language');
     }
 
     

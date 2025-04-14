@@ -5,7 +5,10 @@
 }">
 <app-burguer-icon class="burguer-icon"></app-burguer-icon>
     <app-header class="header"></app-header>
-    <app-menu class="menu" [ngClass]="{'hidden': !getIsMenuOpen(), 'is-open': getIsMenuOpen()}"></app-menu>
+    <app-menu class="menu" 
+    [ngClass]="{'hidden': !getIsMenuOpen(), 'is-open': getIsMenuOpen()}"
+    [lang]="(lang$ | async)!"
+    ></app-menu>
     <main class="content">
         <section class="section">
             <ng-content></ng-content>  

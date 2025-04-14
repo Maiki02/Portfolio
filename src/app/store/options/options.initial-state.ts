@@ -9,5 +9,5 @@ export const OPTIONS_REDUCER_INITIAL_STATE: OptionsReducer = {
     theme: "light",
     language: "es",
     route: "",
-    isMenuOpen: false
+    isMenuOpen: true
 }

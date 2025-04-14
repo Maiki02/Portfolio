@@ -1,15 +1,70 @@
 @use "vars.scss";
-
+@use "sass:map";
 
 .menu{
     width: 100%;
     height: 100%;
     //background: green;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+
     opacity: 1;
-    transform: translate(0);
-    transition: vars.$ANIMATION_TIME;
+    transition: opacity 0.1s ease-in-out;
 }
+
+.menu.open {
+    opacity: 1;
+}
+  
+.menu.close {
+  opacity: 0;
+}
+
+.menu-header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+
+    h2{
+        margin:0; 
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+.menu-body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+
+    .option{
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 1.5rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: vars.$ANIMATION_TIME;
+        width: max(220px, 70%);
+    }
+
+    .option.selected, .option:hover{
+        background-color: map.get(vars.$PRIMARY_COLOR,300);
+    }
+
+}
+
 
 
 @media screen and (max-width: 1024px) {
