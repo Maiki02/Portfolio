@@ -11,34 +11,3 @@
     transition: vars.$ANIMATION_TIME;
 }
 
-.hidden{
-    transform: translateX(-100%);
-    animation: hidden-menu 0.5s ease-in-out forwards;
-}
-
-.is-open{
-    transform: translateX(0);
-    animation: open-menu 0.5s ease-in-out forwards;
-}
-
-@keyframes hidden-menu {
-  0% {
-    transform: translateX(0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-}
-
-@keyframes open-menu {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}

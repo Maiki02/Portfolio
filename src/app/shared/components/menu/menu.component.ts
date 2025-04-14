@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
     templateUrl: './menu.component.html',
     styleUrl: './menu.component.scss'
 })
-export class MenuComponent implements OnInit, OnDestroy {
+export class MenuComponent {
   private isOpen:boolean = false;
 
   private isOpen$!:Subscription;
@@ -20,23 +20,4 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   }
 
-  ngOnInit(): void {
-    this.setSubscriptions();
-  }
-
-  ngOnDestroy(): void {
-    this.setUnsubscriptions();
-  }
-
-  private setSubscriptions(){
-    this.isOpen$ = this.store.select(state => state.options.isMenuOpen).subscribe(isOpen => this.isOpen = isOpen);
-  }
-
-  private setUnsubscriptions(){
-    this.isOpen$?.unsubscribe();
-  }
-
-  getIsOpen() {
-    return this.isOpen;
-  }
 }

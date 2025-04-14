@@ -1,8 +1,11 @@
-<div class="layout bg-white-200">
+<div class="layout bg-body" [ngClass]="{
+    'dark-theme': (theme$ | async) == 'dark', 
+    'is-menu-close': !getIsMenuOpen()
+}">
     <app-header class="header"></app-header>
-    <app-menu class="menu"></app-menu>
+    <app-menu class="menu" [ngClass]="{'hidden': !getIsMenuOpen(), 'is-open': getIsMenuOpen()}"></app-menu>
     <main class="content">
         <ng-content></ng-content>  
+        <app-footer class="footer"></app-footer>
     </main>
-    <app-footer class="footer"></app-footer>
 </div>
