@@ -7,8 +7,7 @@ import { BurguerIconComponent } from '../menu/burguer-icon/burguer-icon.componen
     selector: 'app-header',
     imports: [
         ThemeButtonsComponent,
-        LanguageButtonsComponent,
-        BurguerIconComponent
+        LanguageButtonsComponent
     ],
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'

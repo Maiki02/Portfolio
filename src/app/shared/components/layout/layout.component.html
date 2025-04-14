@@ -1,7 +1,9 @@
 <div class="layout bg-body" [ngClass]="{
     'dark-theme': (theme$ | async) == 'dark', 
-    'is-menu-close': !getIsMenuOpen()
+    'is-menu-hidden': !getIsMenuOpen(),
+    'is-menu-open': getIsMenuOpen()
 }">
+<app-burguer-icon class="burguer-icon"></app-burguer-icon>
     <app-header class="header"></app-header>
     <app-menu class="menu" [ngClass]="{'hidden': !getIsMenuOpen(), 'is-open': getIsMenuOpen()}"></app-menu>
     <main class="content">

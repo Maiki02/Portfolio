@@ -4,9 +4,7 @@
 $PADDING_HOVER: 0.6rem;
 $POSITION: calc(#{$PADDING_HOVER} / 2);
 
-.menu{
-    position:relative;
-    top: 0.125rem;
+.icon{
     padding: $PADDING_HOVER;
     cursor: pointer;
     border-radius: 50%;
@@ -17,3 +15,36 @@ $POSITION: calc(#{$PADDING_HOVER} / 2);
         stroke: map.get(vars.$NEUTRAL_COLOR, 50);
     }
 }
+
+.cross {
+  opacity: 0;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  .icon{
+    z-index: 100;
+  }
+
+
+
+  .line, .cross {
+    transition: opacity vars.$ANIMATION_TIME ease, transform vars.$ANIMATION_TIME ease;
+  }
+
+  .cross {
+    opacity: 0;
+  }
+
+  .icon.is-open {
+    .line {
+      opacity: 0;
+    }
+
+    .cross {
+      opacity: 1;
+    }
+  }  
+}
+

@@ -7,12 +7,14 @@ import { Store } from '@ngrx/store';
 import { AppState } from '@/store/types';
 import { ThemeService } from '@/shared/services/theme.service';
 import { CommonModule } from '@angular/common';
+import { BurguerIconComponent } from '../menu/burguer-icon/burguer-icon.component';
 
 @Component({
     selector: 'app-layout',
     imports: [
         CommonModule,
         HeaderComponent,
+        BurguerIconComponent,
         MenuComponent,
         FooterComponent
     ],
