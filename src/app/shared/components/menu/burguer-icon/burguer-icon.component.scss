@@ -1,0 +1,20 @@
+@import 'vars.scss';
+
+$PADDING_HOVER: 0.6rem;
+$POSITION: calc(#{$PADDING_HOVER} / 2);
+
+.menu{
+    position:relative;
+    top: 0.125rem;
+    padding: $PADDING_HOVER;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+.line {
+  //transform-origin: center;
+  /*transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+              opacity 0.3s ease;*/
+}
+    

@@ -1,18 +1,16 @@
+import { setIsMenuOpen } from '@/store/options/options.actions';
 import { AppState } from '@/store/types';
-import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 
 @Component({
-    selector: 'app-menu',
-    imports: [
-        CommonModule
-    ],
-    templateUrl: './menu.component.html',
-    styleUrl: './menu.component.scss'
+  selector: 'app-burguer-icon',
+  imports: [],
+  templateUrl: './burguer-icon.component.html',
+  styleUrl: './burguer-icon.component.scss'
 })
-export class MenuComponent implements OnInit, OnDestroy {
+export class BurguerIconComponent implements OnInit, OnDestroy {
   private isOpen:boolean = false;
 
   private isOpen$!:Subscription;
@@ -36,7 +34,11 @@ export class MenuComponent implements OnInit, OnDestroy {
     this.isOpen$?.unsubscribe();
   }
 
-  getIsOpen() {
+  public getIsOpen() {
     return this.isOpen;
+  }
+
+  public toggleMenu() {
+    this.store.dispatch(setIsMenuOpen({isMenuOpen: !this.isOpen}));
   }
 }

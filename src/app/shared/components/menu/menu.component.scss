@@ -6,4 +6,39 @@
     height: 100%;
     //background: green;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transform: translate(0);
+    transition: vars.$ANIMATION_TIME;
+}
+
+.hidden{
+    transform: translateX(-100%);
+    animation: hidden-menu 0.5s ease-in-out forwards;
+}
+
+.is-open{
+    transform: translateX(0);
+    animation: open-menu 0.5s ease-in-out forwards;
+}
+
+@keyframes hidden-menu {
+  0% {
+    transform: translateX(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes open-menu {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

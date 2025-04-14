@@ -14,3 +14,8 @@ export const setRoute = createAction(
     '[Options] Set Route', 
     props<{route: string}>()
 )
+
+export const setIsMenuOpen = createAction(
+    '[Options] Set Is Menu Open', 
+    props<{isMenuOpen: boolean}>()
+)

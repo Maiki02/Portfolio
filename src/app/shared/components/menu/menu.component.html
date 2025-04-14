@@ -1,5 +1,5 @@
-<nav class="menu bg-white">
+<nav class="menu bg-white" [ngClass]="{'is-open': getIsOpen(), 'hidden': !getIsOpen()}">
 
-
+    {{getIsOpen()}}
 
 </nav>

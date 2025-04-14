@@ -22,6 +22,13 @@ export const optionsReducer = createReducer(
         ...state,
         route: action.route
       }
+    )),
+
+    on(actions.setIsMenuOpen, (state, action) => (
+      {
+        ...state,
+        isMenuOpen: action.isMenuOpen
+      }
     ))
 
 );
