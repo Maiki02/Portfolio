@@ -1,0 +1,21 @@
+@use "vars.scss";
+
+.card-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.img{
+    width:8rem;
+    height: 12rem;
+    background: red;
+    transition: vars.$ANIMATION_TIME;
+}
+
+.title{
+    margin:0;
+}
+
