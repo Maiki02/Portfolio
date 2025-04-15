@@ -18,10 +18,6 @@ export const routes: Routes = [
         component: LibraryComponent
     },
     {
-        path: '**',
-        loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent)
-    },
-    {
         path: ROUTES.EXPERIENCE,
         loadComponent: () => import('./pages/experience/experience.component').then(m => m.ExperienceComponent)
     },
@@ -33,6 +29,9 @@ export const routes: Routes = [
         path: ROUTES.PROFILE,
         loadComponent: () => import('./pages/about-me/about-me.component').then(m => m.AboutMeComponent)
     },
-
+    {
+        path: '**',
+        loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent)
+    },
 
 ];

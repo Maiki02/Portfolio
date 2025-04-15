@@ -1,5 +1,9 @@
 import { LayoutComponent } from '@/shared/components/layout/layout.component';
-import { Component } from '@angular/core';
+import { ROUTES } from '@/shared/const/routes';
+import { setRoute } from '@/store/options/options.actions';
+import { AppState } from '@/store/types';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-education',
@@ -9,6 +13,11 @@ import { Component } from '@angular/core';
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss'
 })
-export class EducationComponent {
+export class EducationComponent implements OnInit {
 
+  constructor(private store:Store<AppState>){}
+
+  ngOnInit(): void {
+    this.store.dispatch(setRoute({route: ROUTES.EDUCATION}));
+  } 
 }
