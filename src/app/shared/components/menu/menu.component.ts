@@ -6,6 +6,7 @@ import { Observable, Subscription } from 'rxjs';
 import { MenuIconsComponent } from './menu-icons/menu-icons.component';
 import { LangService } from '@/shared/services/lang.service';
 import { ROUTES } from '@/shared/const/routes';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -20,7 +21,7 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   public isOpen$: Observable<boolean>;
   private route$!:Subscription;
-  constructor(private store: Store<AppState>, private langSvc:LangService) {
+  constructor(private store: Store<AppState>, private langSvc:LangService, private router:Router) {
     this.isOpen$=this.store.select('options','isMenuOpen');
   }
 
@@ -34,6 +35,10 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   isRouteSelected(route: string) {
     return this.routeSelected === route;
+  }
+
+  goTo(route: string) {
+    this.router.navigate([route]);
   }
 
   getLibraryText() {

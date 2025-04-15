@@ -15,10 +15,10 @@ import { Observable } from 'rxjs';
 })
 export class LanguageButtonsComponent {
 
-  public language: Observable<"es" | "en">;
+  public language$: Observable<"es" | "en">;
 
   constructor(private store:Store<AppState>) {
-    this.language = this.store.select(state => state.options.language);
+    this.language$ = this.store.select(state => state.options.language);
   }
 
   setLanguage(language: "es" | "en") {

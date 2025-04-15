@@ -1,6 +1,78 @@
+@use "vars.scss";
 
-
-.selected{
-    background-color: green !important;
-    color: white !important;
+.flag-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    width: 2rem;
+    height: 2rem;
 }
+
+.flag{
+    position:absolute;
+    width: 2rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.flag.selected{ 
+    z-index: 1;
+    opacity: 0;
+}
+
+.arg.selected{
+    animation: fade-out-top 0.5s ease-in-out;
+}
+
+.usa:not(.selected){
+    animation: fade-in-bottom 0.5s ease-in-out;
+}
+
+.usa.selected{
+    animation: fade-out-top 0.5s ease-in-out;
+}
+
+.arg:not(.selected){
+    animation: fade-in-bottom 0.5s ease-in-out;
+}
+
+.flag:hover{
+    scale: 1.05;
+}
+
+@keyframes fade-out-top {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    75% {
+      opacity: 0.2;
+      transform: translateY(-50%);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-75%);
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(75%);
+    }
+
+    25% {
+      opacity: 0.2;
+      transform: translateY(50%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+    

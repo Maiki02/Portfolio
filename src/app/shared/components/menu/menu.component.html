@@ -5,7 +5,7 @@
     
     <div class="menu-body">
 
-        <div class="option" [ngClass]="{'selected': isRouteSelected(ROUTES.LIBRARY)}">
+        <div class="option" [ngClass]="{'selected': isRouteSelected(ROUTES.LIBRARY)}" (click)="goTo(ROUTES.LIBRARY)">
             <app-menu-icons class="icon" [name]="'library'"></app-menu-icons>
 
             <span class="option-text">{{getLibraryText()}}</span>

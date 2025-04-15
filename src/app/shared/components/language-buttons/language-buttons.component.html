@@ -1,2 +1,5 @@
-<button (click)="setLanguage('es')" [ngClass]="{'selected': (language | async) == 'es' }">ES</button>
-<button (click)="setLanguage('en')" [ngClass]="{'selected': (language | async) == 'en' }">EN</button>
+
+<div class="flag-container">
+    <img class="flag arg" src="flags/arg.png" (click)="setLanguage('es')" [ngClass]="{'selected': (language$ | async) === 'es'}" >
+    <img class="flag usa" src="flags/usa.png" (click)="setLanguage('en')" [ngClass]="{'selected': (language$ | async) === 'en'}">
+</div>
