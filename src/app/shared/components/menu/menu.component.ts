@@ -7,10 +7,14 @@ import { MenuIconsComponent } from './menu-icons/menu-icons.component';
 import { LangService } from '@/shared/services/lang.service';
 import { ROUTES } from '@/shared/const/routes';
 import { Router } from '@angular/router';
+import { HelpButtonComponent } from '../help-button/help-button.component';
 
 @Component({
   selector: 'app-menu',
-  imports: [CommonModule, MenuIconsComponent],
+  imports: [
+    CommonModule, 
+    MenuIconsComponent,
+    HelpButtonComponent],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
 })

@@ -31,7 +31,6 @@
     transition: vars.$ANIMATION_TIME;
 }
 
-
 h1, h2, h3, h4, h5, h6, p, span{
     color: map.get(vars.$NEUTRAL_COLOR, 800);
     transition: vars.$ANIMATION_TIME;
@@ -42,6 +41,12 @@ h1, h2, h3, h4, h5, h6, p, span{
     transition: vars.$ANIMATION_TIME;
 }
 
+.svg-icon-light{
+    *{
+        stroke:  map.get(vars.$NEUTRAL_COLOR, 500);
+        transition: vars.$ANIMATION_TIME;
+    }
+}
 
 
 .dark-theme{
@@ -76,6 +81,13 @@ h1, h2, h3, h4, h5, h6, p, span{
 
     .white-color{
         color: map.get(vars.$NEUTRAL_COLOR, 900);
+    }
+
+    .svg-icon-light{
+        *{
+            stroke: map.get(vars.$NEUTRAL_COLOR, 500);
+            transition: vars.$ANIMATION_TIME;
+        }
     }
 }
 
