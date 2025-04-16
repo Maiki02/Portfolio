@@ -1,0 +1,50 @@
+@use 'vars.scss';
+@use "sass:map";
+
+
+$PADDING_HOVER: 0.6rem;
+
+.icon{
+    padding: $PADDING_HOVER;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.container{
+    position: relative;
+}
+
+.options{
+    position: absolute;
+    top: -200%;
+    right: 0.5rem;
+    z-index: 100;
+    width: 200px;
+    height: auto;
+    border: 1px solid map.get(vars.$NEUTRAL_COLOR, 500);
+    border-radius: 1rem;
+
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    background: map.get(vars.$NEUTRAL_COLOR, 50);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.option{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    
+    span{
+        margin-left: 0.5rem;
+        font-size: 1rem;
+    }
+}

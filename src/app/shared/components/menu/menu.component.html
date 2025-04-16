@@ -1,34 +1,40 @@
 <nav class="menu bg-white" [ngClass]="{'close': !(isOpen$ | async), 'open': (isOpen$ | async)}">
-    <div class="menu-header">
-        <h2>Portfolio</h2>
+    
+    <div class="menu-top">
+
+        <div class="menu-header">
+            <h2>Portfolio</h2>
+        </div>
+        
+        <div class="menu-body">
+    
+            <div class="option" [ngClass]="{'selected': isRouteSelected(ROUTES.LIBRARY)}" (click)="goTo(ROUTES.LIBRARY)">
+                <app-menu-icons class="icon" [name]="'library'"></app-menu-icons>
+    
+                <span class="option-text">{{getLibraryText()}}</span>
+            </div>
+    
+            <div class="option" [ngClass]="{'selected': isRouteSelected(ROUTES.EXPERIENCE)}" (click)="goTo(ROUTES.EXPERIENCE)">
+                <app-menu-icons class="icon" [name]="'work'"></app-menu-icons>
+    
+                <span class="option-text">{{getWorkText()}}</span>
+            </div>
+    
+    
+            <div class="option" [ngClass]="{'selected': isRouteSelected(ROUTES.EDUCATION)}" (click)="goTo(ROUTES.EDUCATION)">
+                <app-menu-icons class="icon" [name]="'education'"></app-menu-icons>
+    
+                <span class="option-text">{{getEducationText()}}</span>
+            </div>
+    
+            <div class="option" [ngClass]="{'selected': isRouteSelected(ROUTES.PROFILE)}" (click)="goTo(ROUTES.PROFILE)">
+                <app-menu-icons class="icon" [name]="'profile'"></app-menu-icons>
+    
+                <span class="option-text">{{getProfileText()}}</span>
+            </div>
+    
+        </div>
     </div>
     
-    <div class="menu-body">
-
-        <div class="option" [ngClass]="{'selected': isRouteSelected(ROUTES.LIBRARY)}" (click)="goTo(ROUTES.LIBRARY)">
-            <app-menu-icons class="icon" [name]="'library'"></app-menu-icons>
-
-            <span class="option-text">{{getLibraryText()}}</span>
-        </div>
-
-        <div class="option" [ngClass]="{'selected': isRouteSelected(ROUTES.EXPERIENCE)} ">
-            <app-menu-icons class="icon" [name]="'work'"></app-menu-icons>
-
-            <span class="option-text">{{getWorkText()}}</span>
-        </div>
-
-
-        <div class="option" [ngClass]="{'selected': isRouteSelected(ROUTES.EDUCATION)} ">
-            <app-menu-icons class="icon" [name]="'education'"></app-menu-icons>
-
-            <span class="option-text">{{getEducationText()}}</span>
-        </div>
-
-        <div class="option" [ngClass]="{'selected': isRouteSelected(ROUTES.PROFILE)} ">
-            <app-menu-icons class="icon" [name]="'profile'"></app-menu-icons>
-
-            <span class="option-text">{{getProfileText()}}</span>
-        </div>
-
-    </div>
+    <app-help-button class="help-container"></app-help-button>
 </nav>
