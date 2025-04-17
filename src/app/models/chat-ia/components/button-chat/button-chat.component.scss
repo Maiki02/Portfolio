@@ -1,0 +1,12 @@
+@use "vars.scss";
+@use "sass:map";
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background: map.get(vars.$PRIMARY_COLOR, 400);
+} 
+
