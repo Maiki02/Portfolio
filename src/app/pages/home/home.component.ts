@@ -10,6 +10,7 @@ import { StartButtonComponent } from '@/shared/components/start-button/start-but
 import { Router } from '@angular/router';
 import { setRoute } from '@/store/options/options.actions';
 import { ROUTES } from '@/shared/const/routes';
+import { MouseTrailComponent } from '@/shared/components/mouse-trail/mouse-trail.component';
 
 @Component({
     selector: 'app-home',
@@ -17,7 +18,8 @@ import { ROUTES } from '@/shared/const/routes';
         CommonModule,
         HeaderComponent,
         TextNameComponent,
-        StartButtonComponent
+        StartButtonComponent,
+        MouseTrailComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'

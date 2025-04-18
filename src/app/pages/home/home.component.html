@@ -1,9 +1,10 @@
 <div [ngClass]="{'dark-theme': (theme$ | async) === 'dark'}">
   
-  
+  <app-mouse-trail></app-mouse-trail>
+<!--
   <div class="bubbles-container bg-white-200">
     <!-- Si modificamos el 25, también desde el código Scss -->
-    <div *ngFor="let _ of [].constructor(25); let i = index" class="bubble bg-primary"></div>
+    <!--<div *ngFor="let _ of [].constructor(25); let i = index" class="bubble bg-primary"></div>
 
     <app-header class="header" 
     style="--width:100%;"
@@ -19,7 +20,7 @@
         
     </section>
   
-  </div>
+  </div>-->
 
 </div>
 
