@@ -8,7 +8,7 @@
         <path d="M11.992 17H12.001" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
 
-    <div class="options bg-white">
+    <div class="options bg-white" [ngClass]="{'visible': showList, 'invisible': !showList}">
         <div class="option bg-hover-neutral">
             <app-icons [name]="'chat'"></app-icons>
             <span>{{sendMessageText()}}</span>

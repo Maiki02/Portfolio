@@ -20,6 +20,7 @@ $PADDING_HOVER: 0.6rem;
     right: 0.5rem;
     z-index: 100;
     width: 200px;
+
     height: auto;
     border: 1px solid map.get(vars.$NEUTRAL_COLOR, 500);
     border-radius: 1rem;
@@ -47,4 +48,29 @@ $PADDING_HOVER: 0.6rem;
         margin-left: 0.5rem;
         font-size: 1rem;
     }
+}
+
+
+.invisible{
+    display:none;
+}
+
+.visible{
+    display:flex;
+    animation: show-options 0.5s ease-in-out;
+}
+
+@keyframes show-options {
+    0% {
+        opacity: 0;
+
+        width: 0px;
+    }
+    100% {
+        opacity: 1;
+        width: 200px;
+
+    }
+
+
 }

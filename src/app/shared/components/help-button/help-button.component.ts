@@ -1,10 +1,12 @@
 import { IconsComponent } from '@/shared/icons/icons.component';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-help-button',
   imports: [
-    IconsComponent
+    IconsComponent,
+    CommonModule
   ],
   templateUrl: './help-button.component.html',
   styleUrl: './help-button.component.scss'
