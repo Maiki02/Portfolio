@@ -8,6 +8,7 @@ import { AppState } from '@/store/types';
 import { ThemeService } from '@/shared/services/theme.service';
 import { CommonModule } from '@angular/common';
 import { BurguerIconComponent } from '../menu/burguer-icon/burguer-icon.component';
+import { BackgroundBlobComponent } from '../background-blob/background-blob.component';
 
 @Component({
     selector: 'app-layout',
@@ -16,7 +17,8 @@ import { BurguerIconComponent } from '../menu/burguer-icon/burguer-icon.componen
         HeaderComponent,
         BurguerIconComponent,
         MenuComponent,
-        FooterComponent
+        FooterComponent,
+        BackgroundBlobComponent
     ],
     templateUrl: './layout.component.html',
     styleUrl: './layout.component.scss'

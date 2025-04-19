@@ -89,6 +89,6 @@ $PADDING_OPTION: 1.5rem;
    .menu{
         position:relative;
         top: calc(vars.$HEADER_HEIGHT * -1);
-        height: 100dvh;
+        height: calc(100% + vars.$HEADER_HEIGHT);
    }
 }

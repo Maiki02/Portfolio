@@ -1,0 +1,45 @@
+@use 'vars.scss';
+@use "sass:map";
+
+$FIRST_COLOR: map.get(vars.$NEUTRAL_COLOR, 100);
+$SECOND_COLOR: map.get(vars.$NEUTRAL_COLOR, 300);
+$DURATION_MIDDLE: 48s;
+$DURATION_END: 60s;
+$DURATION_START: 32s;
+
+  .bg {
+    animation:slide $DURATION_MIDDLE ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, $FIRST_COLOR 50%, $SECOND_COLOR 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+
+  $FIRST_COLOR: map.get(vars.$NEUTRAL_COLOR, 1000);
+  $SECOND_COLOR: map.get(vars.$NEUTRAL_COLOR, 800);
+  .dark-theme.bg{
+    background-image: linear-gradient(-60deg, $FIRST_COLOR 50%, $SECOND_COLOR 50%);
+    opacity: 0.5;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:$DURATION_START;
+  }
+  
+  .bg3 {
+    animation-duration: $DURATION_END;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
