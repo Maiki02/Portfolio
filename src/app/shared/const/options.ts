@@ -1,0 +1,1 @@
+export const WIDTH_WINDOW_HEADER = 1024;
