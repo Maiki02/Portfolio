@@ -2,6 +2,8 @@
 
 :host {
     --width: auto;
+    --background-1024: transparent;
+    --box-shadow-1024: none;
 }
 
 header{
@@ -21,4 +23,13 @@ header{
     display: flex;
     align-items: center;
     gap: 1.5rem;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .is-not-home {
+        background: var(--background-1024);
+        box-shadow: var(--box-shadow-1024) !important;
+    }
+
 }
