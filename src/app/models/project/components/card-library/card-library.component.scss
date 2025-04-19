@@ -41,3 +41,19 @@
 .scale-up-vertical-center{animation:scale-up-vertical-center 0.4s} 
 @keyframes scale-up-vertical-center{0%{transform:scaleY(.2)}100%{transform:scaleY(1)}}
 
+@media screen and (max-width: 768px) {
+    .img{
+        width:10rem;
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-container{
+        width:100%;
+    }
+
+    .img{
+        width:100%;
+    }
+}

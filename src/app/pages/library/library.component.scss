@@ -7,3 +7,24 @@
     flex-wrap: wrap;
     gap: 1rem;
 }
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 48%;
+    }
+    
+    .library{
+        gap:0;
+    }
+}
+
+
+@media screen and (max-width: 340px) {
+    .library{
+        gap: 2rem;
+    }
+    
+    .card{
+        width:100%;
+    }
+}
