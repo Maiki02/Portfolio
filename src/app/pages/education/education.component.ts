@@ -1,3 +1,4 @@
+import { CardEducationComponent } from '@/models/education/components/card/card.component';
 import { LayoutComponent } from '@/shared/components/layout/layout.component';
 import { ROUTES } from '@/shared/const/routes';
 import { setRoute } from '@/store/options/options.actions';
@@ -8,7 +9,8 @@ import { Store } from '@ngrx/store';
 @Component({
   selector: 'app-education',
   imports: [
-    LayoutComponent
+    LayoutComponent,
+    CardEducationComponent
   ],
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss'

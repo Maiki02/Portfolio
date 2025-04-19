@@ -24,7 +24,7 @@ export class MouseTrailComponent implements OnInit, OnDestroy {
   private E = {
     debug: true,
     friction: 0.5,
-    trails: 20,
+    trails: 25,
     size: 50,
     dampening: 0.25,
     tension: 0.98,
@@ -120,7 +120,7 @@ export class MouseTrailComponent implements OnInit, OnDestroy {
       this.ctx.globalCompositeOperation = 'source-over';
       this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
       this.ctx.globalCompositeOperation = 'lighter';
-      this.ctx.strokeStyle = 'hsla(' + Math.round(this.f.update()) + ',50%,50%,0.2)';
+      this.ctx.strokeStyle = 'hsla(230, 58%, 53%, 0.2)';
       this.ctx.lineWidth = 1;
       
       for (let t = 0; t < this.E.trails; t++) {

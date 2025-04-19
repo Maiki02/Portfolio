@@ -5,6 +5,8 @@ $PADDING_HOVER: 0.6rem;
 $POSITION: calc(#{$PADDING_HOVER} / 2);
 
 .icon{
+  
+  box-sizing: content-box;
     padding: $PADDING_HOVER;
     cursor: pointer;
     border-radius: 50%;
