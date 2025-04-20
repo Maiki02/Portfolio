@@ -1,4 +1,4 @@
-<div class="theme-toggle bg-white" (click)="toggleTheme()">
+<div class="theme-toggle bg-white" [ngClass]="{'bg-white': !isHeaderWithBackground, 'bg-white-200': isHeaderWithBackground}" (click)="toggleTheme()">
     <div class="icon-container" [ngClass]="{ 'dark-mode': isDarkMode() }">
       <div class="sun-icon" [ngClass]="{ 'visible': isDarkMode(), 'hidden': !isDarkMode() }">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">

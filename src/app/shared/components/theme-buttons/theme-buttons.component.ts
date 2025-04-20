@@ -2,7 +2,7 @@ import { ThemeService } from '@/shared/services/theme.service';
 import { setTheme } from '@/store/options/options.actions';
 import { AppState } from '@/store/types';
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 
@@ -15,6 +15,8 @@ import { Observable, Subscription } from 'rxjs';
   styleUrl: './theme-buttons.component.scss'
 })
 export class ThemeButtonsComponent implements OnInit, OnDestroy {
+  @Input({required: true}) isHeaderWithBackground: boolean=false;
+  
   public theme$: Observable<"light" | "dark">;
   public theme: "light" | "dark" = "light";
   public subs!:Subscription;
