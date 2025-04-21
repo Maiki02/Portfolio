@@ -1,4 +1,5 @@
 @use "vars.scss";
+@use "animations.scss";
 @use "sass:map";
 
 .card {
@@ -108,6 +109,3 @@
         height: 12rem;
     }
 }
-
-
-.scale-up-horizontal-left{animation:scale-up-horizontal-left 0.4s } @keyframes scale-up-horizontal-left{0%{transform:scaleX(.4);transform-origin:left center}100%{transform:scaleX(1);transform-origin:left center}}

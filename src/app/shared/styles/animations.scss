@@ -1,0 +1,25 @@
+.scale-up-horizontal-left {
+  animation: scale-up-horizontal-left 0.4s;
+}
+@keyframes scale-up-horizontal-left {
+  0% {
+    transform: scaleX(0.4);
+    transform-origin: left center;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
+
+.scale-up-vertical-center {
+  animation: scale-up-vertical-center 0.4s;
+}
+@keyframes scale-up-vertical-center {
+  0% {
+    transform: scaleY(0.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}

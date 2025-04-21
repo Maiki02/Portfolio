@@ -1,4 +1,5 @@
 @use "vars.scss";
+@use "animations.scss";
 @use "sass:map";
 
 .card-container{
@@ -36,10 +37,6 @@
     font-size: 1.5rem;
     margin:0;
 }
-
-
-.scale-up-vertical-center{animation:scale-up-vertical-center 0.4s} 
-@keyframes scale-up-vertical-center{0%{transform:scaleY(.2)}100%{transform:scaleY(1)}}
 
 @media screen and (max-width: 768px) {
     .img{
