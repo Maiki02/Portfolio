@@ -1,7 +1,7 @@
 <div class="card bg-white scale-up-horizontal-left">
-    <div class="image">
-        <span>[PLACEHOLDER]</span>
-    </div>
+    <img class="image" [src]="imageName" loading="lazy" alt=""
+    [ngClass]="{'background-image': (theme$ | async) == 'dark'}"
+    >
 
     <div class="content">
         <div class="title-and-description">

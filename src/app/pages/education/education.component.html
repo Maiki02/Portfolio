@@ -1,8 +1,25 @@
 <app-layout>
     <div class="education-container">
-        <app-card-education class="card-container" [title]="'Universidad Tecnológica Nacional'" [description]="'Tecnicatura universitaria en desarrollo y producción de videojuegos'" [date]="'2024-act'"></app-card-education>
-        <app-card-education class="card-container" [title]="'Universidad Nacional de Rosario'" [description]="'Licenciatura en Ciencias de la computación'" [date]="'2020-2022'"></app-card-education>
-        <app-card-education class="card-container" [title]="'Argentina Programa'" [description]="'#YoProgramo'" [date]="'2020-2021'"></app-card-education>
+        <app-card-education class="card-container" 
+        [title]="'Desarrollo y producción de videojuegos - UTN'" 
+        [description]="getDescriptionUTN()" 
+        [date]="'2024-act'"
+        [imageName]="'education/UTN.png'"
+        ></app-card-education>
+
+        <app-card-education class="card-container" 
+        [title]="'Ciencias de la computación - UNR'" 
+        [description]="getDescriptionUNR()" 
+        [date]="'2020-2022'"
+        [imageName]="'education/unr.png'"
+        ></app-card-education>
+
+        <app-card-education class="card-container" 
+        [title]="'Argentina Programa y Argentina Programa 4.0'" 
+        [description]="getDescriptionArgProg()" 
+        [date]="'2020-2022'"
+        [imageName]="'education/arg-prog.png'"
+        ></app-card-education>
     </div>
 
 </app-layout>

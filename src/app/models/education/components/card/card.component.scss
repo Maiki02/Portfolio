@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 10rem;
+    height: auto;
     padding: 1rem;
     gap: 1.5rem;
     border-radius: 2rem;
@@ -36,7 +36,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .title{
@@ -49,16 +49,28 @@
     font-size: 1rem;
     font-weight: 400;
     margin:0;
+    
+    white-space: pre-line;
+    line-height: 0.8rem;
+
 }
 
 .date{
     font-size: 1rem;
     font-weight: 400;
+    position:absolute;
+    right: 2rem;
+    top: 1.5rem;
 }
 
 
+img{
+    width:100%;
+    height:100%;
+}
+
 .image {
-    background: map.get(vars.$PRIMARY_COLOR, 400);
+    //background: map.get(vars.$PRIMARY_COLOR, 400);
     height: 100%;
     min-width: 10rem;
     width: 10rem;
@@ -66,24 +78,21 @@
     display:flex;
     align-items: center;
     justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+    padding: 0.5rem;
+    object-fit: contain;
+
 }
 
-@media screen and (min-width: 1500px) {
-    .card{
-        height: 12rem;
-    }
+.background-image{
+    background: map.get(vars.$NEUTRAL_COLOR, 200);
 }
 
-@media screen and (max-width: 720px) {
-    .card{
-        height: 12rem;
-    }
-}
+
 
 @media screen and (max-width: 510px) {
-    .card{
-        height: 10rem;
-    }
 
     .title{
         font-size: 1rem;
@@ -101,11 +110,5 @@
         min-width: 8rem;
         width: 8rem;
         height: 8rem;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .card{
-        height: 12rem;
     }
 }
