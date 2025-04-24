@@ -63,6 +63,11 @@ span {
   transition: vars.$ANIMATION_TIME;
 }
 
+.color-800 {
+  color: map.get(vars.$NEUTRAL_COLOR, 800);
+  transition: vars.$ANIMATION_TIME;
+}
+
 .svg-icon-light {
   * {
     stroke: map.get(vars.$NEUTRAL_COLOR, 500);
@@ -126,6 +131,10 @@ span {
 
   .grey-color {
     color: map.get(vars.$NEUTRAL_COLOR, 400);
+  }
+
+  .color-800 {
+    color: map.get(vars.$NEUTRAL_COLOR, 100);
   }
 
   .svg-icon-light {
