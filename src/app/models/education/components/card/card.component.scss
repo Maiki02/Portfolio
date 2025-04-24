@@ -4,14 +4,14 @@
 
 .card {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
     height: auto;
-    padding: 1rem;
+    padding: 0.75rem;
     gap: 1.5rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position:relative;
     transition: vars.$ANIMATION_TIME;
@@ -22,93 +22,36 @@
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.content{
+.basic-info{
     display:flex;
-    flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 0.5rem;
-    height: 100%;
-}
-
-.title-and-description{
-    display:flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1.5rem;
-}
-
-.title{
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin:0;
-}
-
-.description{
-    font-size: 1rem;
-    font-weight: 400;
-    margin:0;
-    
-    white-space: pre-line;
-    line-height: 0.8rem;
-
-}
-
-.date{
-    font-size: 1rem;
-    font-weight: 400;
-    position:absolute;
-    right: 2rem;
-    top: 1.5rem;
-}
-
-
-img{
-    width:100%;
-    height:100%;
-}
-
-.image {
-    //background: map.get(vars.$PRIMARY_COLOR, 400);
-    height: 100%;
-    min-width: 10rem;
-    width: 10rem;
-    border-radius: 1rem;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-
-    background-size: cover;
-    background-position: center;
-    padding: 0.5rem;
-    object-fit: contain;
-
-}
-
-.background-image{
-    background: map.get(vars.$NEUTRAL_COLOR, 200);
-}
-
-
-
-@media screen and (max-width: 510px) {
+    gap:0.5rem;
 
     .title{
-        font-size: 1rem;
+        margin:0;
+        font-size: 1.25rem;
+        font-weight: 600;
     }
 
-    .description{
-        font-size: 0.75rem;
-    }
+    .ubication-container, .period-container{
+        display:flex;
+        align-items: center;
+        gap:0.5rem;
 
-    .date{
-        font-size: 0.7rem;
     }
+}
 
-    .image{
-        min-width: 8rem;
-        width: 8rem;
-        height: 8rem;
+.line-grey{
+    width:100%;
+    height: 1px;
+    border-radius: 0.25rem;
+
+}
+
+
+@media screen and (min-width: 1024px) {
+    .card{
+        padding:1rem;
     }
 }

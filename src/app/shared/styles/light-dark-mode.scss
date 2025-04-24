@@ -1,111 +1,151 @@
-@use 'vars.scss';
+@use "vars.scss";
 @use "sass:map";
 
-.bg-white{
-    background-color: map.get(vars.$NEUTRAL_COLOR, 50);
-    transition: vars.$ANIMATION_TIME; 
+.bg-white {
+  background-color: map.get(vars.$NEUTRAL_COLOR, 50);
+  transition: vars.$ANIMATION_TIME;
 }
 
-.bg-white-opacity{
-    background-color: rgba(map.get(vars.$NEUTRAL_COLOR, 50), 0.7);
+.bg-white-opacity {
+  background-color: rgba(map.get(vars.$NEUTRAL_COLOR, 50), 0.7);
+  transition: vars.$ANIMATION_TIME;
+}
+
+.bg-white-100 {
+  background-color: map.get(vars.$NEUTRAL_COLOR, 100);
+  transition: vars.$ANIMATION_TIME;
+}
+
+.bg-white-200 {
+  background-color: map.get(vars.$NEUTRAL_COLOR, 200);
+  transition: vars.$ANIMATION_TIME;
+}
+
+.bg-white-300 {
+  background-color: map.get(vars.$NEUTRAL_COLOR, 300);
+  transition: vars.$ANIMATION_TIME;
+}
+
+.bg-neutral-600 {
+  background-color: map.get(vars.$NEUTRAL_COLOR, 600);
+  transition: vars.$ANIMATION_TIME;
+}
+
+.bg-hover-neutral:hover {
+  background-color: map.get(vars.$NEUTRAL_COLOR, 300);
+  transition: vars.$ANIMATION_TIME;
+}
+
+.bg-hover-neutral:active:not(.not-active) {
+  background-color: map.get(vars.$NEUTRAL_COLOR, 400);
+  transition: vars.$ANIMATION_TIME;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: map.get(vars.$NEUTRAL_COLOR, 800);
+  transition: vars.$ANIMATION_TIME;
+}
+
+.white-color {
+  color: map.get(vars.$NEUTRAL_COLOR, 50);
+  transition: vars.$ANIMATION_TIME;
+}
+
+.grey-color {
+  color: map.get(vars.$NEUTRAL_COLOR, 600);
+  transition: vars.$ANIMATION_TIME;
+}
+
+.svg-icon-light {
+  * {
+    stroke: map.get(vars.$NEUTRAL_COLOR, 500);
     transition: vars.$ANIMATION_TIME;
+  }
 }
 
-.bg-white-100{
-    background-color: map.get(vars.$NEUTRAL_COLOR, 100);
-    transition: vars.$ANIMATION_TIME;
+.icon-card {
+  path {
+    stroke: map.get(vars.$NEUTRAL_COLOR, 600);
+  }
 }
 
-.bg-white-200{
-    background-color: map.get(vars.$NEUTRAL_COLOR, 200);
-    transition: vars.$ANIMATION_TIME;
+.dark-theme {
+  .bg-white {
+    background-color: map.get(vars.$NEUTRAL_COLOR, 900);
+  }
+
+  .bg-white-opacity {
+    background-color: rgba(map.get(vars.$NEUTRAL_COLOR, 900), 0.7);
+  }
+
+  .bg-white-100 {
+    background-color: map.get(vars.$NEUTRAL_COLOR, 800);
+  }
+
+  .bg-white-200 {
+    background-color: map.get(vars.$NEUTRAL_COLOR, 700);
+  }
+
+  .bg-white-300 {
+    background-color: map.get(vars.$NEUTRAL_COLOR, 600);
+  }
+
+  .bg-neutral-600 {
+    background-color: map.get(vars.$NEUTRAL_COLOR, 500);
+  }
+
+  .bg-hover-neutral:hover {
+    background-color: map.get(vars.$NEUTRAL_COLOR, 600);
+  }
+
+  .bg-hover-neutral:active:not(.not-active) {
+    background-color: map.get(vars.$NEUTRAL_COLOR, 500);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
+    color: map.get(vars.$NEUTRAL_COLOR, 100);
+  }
+
+  .white-color {
+    color: map.get(vars.$NEUTRAL_COLOR, 900);
+  }
+
+  .grey-color {
+    color: map.get(vars.$NEUTRAL_COLOR, 400);
+  }
+
+  .svg-icon-light {
+    * {
+      stroke: map.get(vars.$NEUTRAL_COLOR, 500);
+    }
+  }
+
+  .icon-card {
+    path {
+      stroke: map.get(vars.$NEUTRAL_COLOR, 400);
+    }
+  }
 }
 
-.bg-white-300{
-    background-color: map.get(vars.$NEUTRAL_COLOR, 300);
-    transition: vars.$ANIMATION_TIME;
+.bg-default {
+  background-color: map.get(vars.$NEUTRAL_COLOR, "DEFAULT");
 }
 
-.bg-hover-neutral:hover{
-    background-color: map.get(vars.$NEUTRAL_COLOR, 300);
-    transition: vars.$ANIMATION_TIME;
-}
-
-.bg-hover-neutral:active:not(.not-active){
-    background-color: map.get(vars.$NEUTRAL_COLOR, 400);
-    transition: vars.$ANIMATION_TIME;
-}
-
-h1, h2, h3, h4, h5, h6, p, span{
-    color: map.get(vars.$NEUTRAL_COLOR, 800);
-    transition: vars.$ANIMATION_TIME;
-}
-
-.white-color{
-    color: map.get(vars.$NEUTRAL_COLOR, 50);
-    transition: vars.$ANIMATION_TIME;
-}
-
-.svg-icon-light{
-    *{
-        stroke:  map.get(vars.$NEUTRAL_COLOR, 500);
-        transition: vars.$ANIMATION_TIME;
-    }
-}
-
-
-.dark-theme{
-
-    .bg-white{
-        background-color: map.get(vars.$NEUTRAL_COLOR, 900);
-    }
-
-    .bg-white-opacity{
-        background-color: rgba(map.get(vars.$NEUTRAL_COLOR, 900), 0.7);
-    }
-
-    .bg-white-100{
-        background-color: map.get(vars.$NEUTRAL_COLOR, 800);
-    }
-
-    .bg-white-200{
-        background-color: map.get(vars.$NEUTRAL_COLOR, 700);
-    }
-
-    .bg-white-300{
-        background-color: map.get(vars.$NEUTRAL_COLOR, 600);
-    }
-
-    .bg-hover-neutral:hover{
-        background-color: map.get(vars.$NEUTRAL_COLOR, 600);
-    }
-
-    .bg-hover-neutral:active:not(.not-active){
-        background-color: map.get(vars.$NEUTRAL_COLOR, 500);
-    }
-
-    h1, h2, h3, h4, h5, h6, p, span{
-        color: map.get(vars.$NEUTRAL_COLOR, 100);
-    }
-
-    .white-color{
-        color: map.get(vars.$NEUTRAL_COLOR, 900);
-    }
-
-    .svg-icon-light{
-        *{
-            stroke: map.get(vars.$NEUTRAL_COLOR, 500);
-            transition: vars.$ANIMATION_TIME;
-        }
-    }
-}
-
-
-.bg-default{
-    background-color: map.get(vars.$NEUTRAL_COLOR, "DEFAULT");
-}
-
-.bg-primary{
-    background-color: map.get(vars.$PRIMARY_COLOR,300);
-    transition: vars.$ANIMATION_TIME;
+.bg-primary {
+  background-color: map.get(vars.$PRIMARY_COLOR, 300);
+  transition: vars.$ANIMATION_TIME;
 }

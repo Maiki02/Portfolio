@@ -1,3 +1,6 @@
+@use 'vars.scss';
+@use "sass:map";
+
 .icon-container{
     display:flex;
     align-items: center;

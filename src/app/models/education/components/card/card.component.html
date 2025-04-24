@@ -1,15 +1,22 @@
 <div class="card bg-white scale-up-horizontal-left">
-    <img class="image" [src]="imageName" loading="lazy" alt=""
-    [ngClass]="{'background-image': (theme$ | async) == 'dark'}"
-    >
+    
+    <div class="basic-info">
+        <h3 class="title">{{education.title}}</h3>
+        <div class="ubication-container">
+            <app-icons [name]="'school'"></app-icons>
+            <span class="ubication grey-color" >{{education.ubication}}</span>
+        </div>
+
+        <div class="period-container">
+            <app-icons [name]="'calendar'"></app-icons>
+            <span class="period grey-color">{{education.date}}</span>
+        </div>
+    </div>
+
+    <div class="line-grey bg-neutral-600"></div>
 
     <div class="content">
-        <div class="title-and-description">
-            <h3 class="title">{{title}}</h3>
-            <p class="description">{{description}}</p>    
-        </div>
-        <span class="date">{{date}}</span>
-
+        <p class="description">{{education.description}}</p>    
     </div>
 
 </div>
