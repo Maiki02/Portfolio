@@ -26,6 +26,16 @@
   transition: vars.$ANIMATION_TIME;
 }
 
+.bg-neutral-400{
+  background-color: map.get(vars.$NEUTRAL_COLOR, 400);
+  transition: vars.$ANIMATION_TIME;
+}
+
+.bg-neutral-500{
+  background-color: map.get(vars.$NEUTRAL_COLOR, 500);
+  transition: vars.$ANIMATION_TIME;
+}
+
 .bg-neutral-600 {
   background-color: map.get(vars.$NEUTRAL_COLOR, 600);
   transition: vars.$ANIMATION_TIME;
@@ -117,6 +127,14 @@ span {
     background-color: map.get(vars.$NEUTRAL_COLOR, 600);
   }
 
+  .bg-neutral-400{
+    background-color: map.get(vars.$NEUTRAL_COLOR, 600);
+  }
+
+  .bg-neutral-500 {
+    background-color: map.get(vars.$NEUTRAL_COLOR, 600);
+  }
+
   .bg-neutral-600 {
     background-color: map.get(vars.$NEUTRAL_COLOR, 500);
   }
@@ -126,7 +144,7 @@ span {
   }
 
   .bg-hover-neutral:hover {
-    background-color: map.get(vars.$NEUTRAL_COLOR, 600);
+    background-color: map.get(vars.$NEUTRAL_COLOR, 700);
   }
 
   .bg-hover-1000:hover {

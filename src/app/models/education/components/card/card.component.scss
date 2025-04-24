@@ -71,5 +71,17 @@
 @media screen and (min-width: 1024px) {
     .card{
         padding:1rem;
+        flex-direction: row;
+    }
+
+    .basic-info{
+        width: 50%;
+
+    }
+
+    .line-grey{
+        width: 1px;
+        min-height: 9rem;
+
     }
 }
