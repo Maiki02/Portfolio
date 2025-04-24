@@ -8,10 +8,10 @@ export const EDUCATION: {[language: string]: {[key: string]: Education}} = {
             description: 'Formación integral enfocada en la industria del videojuego, participando en todas las etapas del desarrollo.',
             date: '2024-act',
             skills: [
-                'Diseño y producción de videojuegos',
-                'Trabajo en equipos multidisciplinarios',
-                'Creación, prototipado y comercialización de videojuegos',
-                'Narrativa, arte, programación y sonido'
+                'Programación en C#',
+                'Diseño y producción',
+                'Trabajo en equipos',
+                'Narrativa, arte y sonido'
             ]
         },
 
@@ -21,10 +21,10 @@ export const EDUCATION: {[language: string]: {[key: string]: Education}} = {
             description: 'Fundamentos teóricos de la informática con fuerte enfoque en matemáticas y resolución de problemas.',
             date: '2020-2022',
             skills: [
-                'Algoritmos y estructuras de datos',
-                'Matemática discreta y lógica',
-                'Lenguajes formales y teoría de la computación',
-                'Arquitectura de computadoras'
+                'Algoritmos',
+                'Estructuras de datos',
+                'Matematicas discretas',
+                'C++ y Python',
             ]
         },
 
@@ -34,10 +34,10 @@ export const EDUCATION: {[language: string]: {[key: string]: Education}} = {
             description: 'Introducción a la programación y conceptos clave del desarrollo web e inteligencia artificial.',
             date: '2020-2022',
             skills: [
-                'Lógica computacional y algoritmos',
-                'HTML, CSS, JavaScript, Java y SQLite',
-                'Fundamentos de IA y ciencia de datos',
-                'Herramientas de desarrollo web',
+                'IA y ciencia de datos',
+                'POO',
+                'HTML, CSS, JavaScript',
+                'Java y SQLite',
             ]
         }
     },

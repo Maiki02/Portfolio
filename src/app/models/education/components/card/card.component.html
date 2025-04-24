@@ -16,7 +16,13 @@
     <div class="line-grey bg-neutral-600"></div>
 
     <div class="content">
-        <p class="description color-800">{{education.description}}</p>    
+        <p class="description color-800">{{education.description}}</p>
+        
+        <div class="content-tabs">
+            @for (item of education.skills; track $index) {
+                <app-tab [text]="item"></app-tab>
+            }
+        </div>
     </div>
 
 </div>

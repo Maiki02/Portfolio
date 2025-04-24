@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Education } from '../../types/education.interface';
+import { TabComponent } from '../tab/tab.component';
 
 @Component({
   selector: 'app-card-education',
   imports: [
     CommonModule,
-    IconsComponent
+    IconsComponent,
+    TabComponent
   ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
